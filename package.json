@@ -2,6 +2,7 @@
   "name": "inliner",
   "version": "1.0.0",
   "description": "Utility to inline images, CSS and JavaScript for a web page - useful for mobile sites",
+  "homepage": "http://github.com/remy/inliner",
   "main": "lib/index.js",
   "scripts": {
     "cover": "tap test/*.test.js --cov --coverage-report=lcov",
@@ -10,6 +11,13 @@
     "test": "npm run lint && npm run tap",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "keywords": [
+    "mobile",
+    "inline",
+    "production",
+    "build",
+    "minify"
+  ],
   "config": {
     "validate-commit-msg": {
       "helpMessage": "\n-----------\n\nThere was a small validation problem with your commit message:\n\n> %s\n\nIt's not a huge problem, but a valid commit message will ensure\nwhether your commit triggers a release or not (and sometimes the\ncommit won't need to trigger a release). If you really need to, you\ncan skip the validation using `git commit --no-verify`.\n\nIf your commit is a fix, it might want to be:\n\n> fix: storage bug\n\nOr a feature:\n\n> feat: added new storage process\n\nThere's also `docs`, `test` and `chore` and a few more. To read\nhow the commit message should be formatted, please see this short\npost: https://git.io/vVCIR\n"
@@ -40,6 +48,14 @@
     "then-fs": "^2.0.0",
     "uglify-js": "^2.8.0",
     "update-notifier": "^0.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remy/inliner.git"
+  },
+  "license": "MIT",
+  "bin": {
+    "inliner": "cli/index.js"
   },
   "devDependencies": {
     "ghooks": "^1.1.1",
